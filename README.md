@@ -31,12 +31,6 @@ Pick a vibe, hit generate, and get a line pulled straight from their discography
 
 ---
 
-## 🚀 Deployment
-
-The app is built with **Streamlit** and is deployed on https://streamlit.io/cloud
-
----
-
 ## 📦 Requirements
 
 ```bash
