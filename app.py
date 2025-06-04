@@ -4,7 +4,6 @@ import os
 import random
 from dotenv import load_dotenv
 import warnings
-
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 load_dotenv()
@@ -125,7 +124,11 @@ st.markdown(f"""
 # Cache artist lyrics
 @st.cache_data(show_spinner=False, persist="disk")
 def get_lyrics_for_artist(artist_name):
-    result = genius.search_artist(artist_name, max_songs=30, sort="popularity", include_features=False)
+    try:
+        result = genius.search_artist(artist_name, max_songs=30, sort="popularity", include_features=False)
+    except Exception as e:
+        st.error(f"❌ Genius API error: {e}")
+        return []
     all_lines = []
     songs_data = []
     if result and result.songs:
@@ -168,11 +171,7 @@ if st.button("Generate Lyrics"):
     }}
     </style>
     """, unsafe_allow_html=True)
-
-    # Fetch lyrics
     song_lines = get_lyrics_for_artist(artist)
-
-    # Now clear spinner before displaying result
     spinner.empty()
 
     if not song_lines:
@@ -190,4 +189,3 @@ if st.button("Generate Lyrics"):
             </div>
             """,
             unsafe_allow_html=True)
-
