@@ -1,4 +1,4 @@
-# 🎤 Pop Lyrics Generator 💿
+# 🎤 Pop Lyrics Generator
 
 A dreamy, aesthetic Streamlit app that lets you spin the record and discover real lyrics from your favorite **female pop artists** — including **Taylor Swift**, **Ariana Grande**, **Olivia Rodrigo**, **Lana Del Rey**, and more.
 
