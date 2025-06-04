@@ -9,9 +9,9 @@ Pick a vibe, hit generate, and get a line pulled straight from their discography
 ## 🌟 Features
 
 - 🎶 Get real lyrics from selected artists using the Genius API
-- 💿 Select from 10+ iconic pop artists
+- 💿 Select from 10 iconic pop artists
 - 🎀 Pink-glitter aesthetic with vinyl spinner UI
-- 🎨 Animated button effects, album art display, and vinyl emoji highlights
+- 🎨 Animated button effects and album art display
 - ⚡ Instant loading after first fetch (cached)
 
 ---
